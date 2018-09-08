@@ -1,0 +1,16 @@
+#pragma once
+typedef struct edge {
+	int to_vertex;
+	int weight; //this will always be set to 1 :D
+} Edge;
+typedef struct edgeNode {
+	Edge edge;
+	struct edgeNode *next;
+} *EdgeNodePtr;
+typedef struct edgeList {
+	EdgeNodePtr head;
+} EdgeList;
+typedef struct graph {
+	int V;
+	EdgeList *edges;
+} Graph;
